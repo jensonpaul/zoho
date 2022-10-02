@@ -29,7 +29,7 @@ class CriteriaBuilder
      *
      * @return $this
      */
-    public static function where($field, $value, string $operator = 'equals', $module = null): CriteriaBuilder|static
+    public static function where($field, $value, string $operator = 'equals', $module = null): CriteriaBuilder
     {
         $builder = new CriteriaBuilder($module);
 
