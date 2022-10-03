@@ -184,6 +184,19 @@ class ZohoModule
     }
 
     /**
+     * Add new entities to a module in bulk.
+     *
+     * @param  ZCRMRecord  $records
+     * @param  string|null  $trigger  array of triggers
+     *
+     * @return ZCRMRecord[]
+     */
+    public function insertBulk($records, string $trigger = null)
+    {
+        return $this->moduleIns->createRecords($records, $trigger)->getData();
+    }
+
+    /**
      * create record instance that contains the array keys and values
      *
      * @param  array  $args
